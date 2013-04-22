@@ -1,0 +1,36 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <?php echo $this->headTitle('ZF2 Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+    <!-- Scripts -->
+    <?php echo $this->headScript()->appendFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                  ->appendFile($this->basePath() . '/js/jquery-1.7.2.min.js') ?>
+
+	<style>
+		body {font-family:arial; }
+		.question_box { width:900px; margin:0px auto; background:#E8E3E5; padding:10px; }
+		.question_box .info { text-align:right; padding-bottom:10px;}
+		.question_box .question { padding:5px 0px; }
+		.question_box .answers div { padding:5px 0px; }
+		.question_box .answers label { margin-left:7px; }
+		.submit { text-align:right; }
+	</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <?php echo $this->content; ?>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

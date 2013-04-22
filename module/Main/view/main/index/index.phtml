@@ -1,0 +1,19 @@
+<div class="question_box">
+    <form name="question" action="/main/index" method="post">
+    	<input type="hidden" name="question-no" value="<?php echo $this->questionNo; ?>">
+    	<div class="info">
+    		<div>question: <?php echo $this->questionNo; ?> of 10</div>
+    		<div>time remaining: <?php echo $this->timeRemaining; ?></div>
+    	</div>
+    	<div class="question"><pre><?php echo htmlentities($this->question); ?></pre></div>
+    	<div class="answers">
+			<?php echo $this->partial('/main/index/partials/' . $this->questionType . '.phtml', array(
+                'choices' => $this->choices,
+			    'questionNo' => $this->questionNo,
+			)); ?>
+    	</div>
+    	<div class="submit">
+    		<input type="submit" name="submit" value="SUBMIT">
+    	</div>
+    </form>
+</div>

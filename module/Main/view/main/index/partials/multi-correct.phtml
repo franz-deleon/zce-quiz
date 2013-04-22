@@ -1,0 +1,7 @@
+<?php $x = 1;
+    foreach ($this->choices as $key => $choice) :
+    ++$key;
+?>
+<div><input type="checkbox" name="q<?php echo $this->questionNo; ?>[]" value="<?php echo $key; ?>" id="<?php echo $this->questionNo; ?>-<?php echo $key; ?>"><label for="a1"><?php echo $choice; ?></label></div>
+<?php $x++; ?>
+<?php endforeach; ?>

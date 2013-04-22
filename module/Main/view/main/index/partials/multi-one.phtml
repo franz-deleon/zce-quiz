@@ -1,0 +1,7 @@
+<?php $x = 1;
+    foreach ($this->choices as $key => $choice) :
+    ++$key;
+?>
+<div><input type="radio" name="answer" value="<?php echo $key; ?>" id="<?php echo $this->questionNo; ?>-<?php echo $key; ?>"><label for="<?php echo $this->questionNo; ?>-<?php echo $key; ?>"><?php echo $choice; ?></label></div>
+<?php $x++; ?>
+<?php endforeach; ?>
